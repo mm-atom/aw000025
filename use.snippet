@@ -1,10 +1,13 @@
 	// 调用原生响应
 	/**
-	 * ${0:变量注释}
+	 * ${0:原生响应结果}
 	 */
 	const r$CURRENT_SECONDS_UNIX = await(() => {
-		const p1 = $1;	// 参数注释
-		const p2 = $2;	// 参数注释
-		const p3 = $3;	// 参数注释
-		return aw25(p1, p2, p3);
+		const p1 = 'a$1';	// 原生事件/响应名
+		const p2 = $2;	// 原生事件/响应参数
+		const p3 = ${3:3000};	// 超时时间
+		interface Result {
+			// todo
+		}
+		return aw25<Result>(p1, p2, p3);
 	})();
